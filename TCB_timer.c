@@ -10,7 +10,7 @@ void main(void) {
     PORTB.DIRSET = led;
     
 TCB0.CTRLB   = TCB_CNTMODE_INT_gc;
-TCB0.CCMP = 16500;                  // can adjust time          
+TCB0.CCMP = 16500;                  // can adjust time    max value 65535      
 TCB0.INTCTRL = TCB_CAPT_bm;
 TCB0.CTRLA   = 0x3 | TCB_ENABLE_bm;
 sei();
